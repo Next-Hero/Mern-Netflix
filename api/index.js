@@ -6,6 +6,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+// Connect the mongodb
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,

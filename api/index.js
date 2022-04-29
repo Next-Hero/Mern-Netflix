@@ -5,6 +5,7 @@ const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const authRouter = require("./routes/auth");
+const userRouter = require("./routes/users");
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.get("/", (req, res) => {
 
 // use and call api route
 app.use("/api/auth", authRouter);
+app.use("/api/users", userRouter);
 
 app.listen(port, () => {
   console.log("Backend server is running!");

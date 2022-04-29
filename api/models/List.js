@@ -3,19 +3,13 @@ const mongoose = require("mongoose");
 const ListSchema = new mongoose.Schema(
   {
     title: { type: String, required: true, unique: true },
-    desc: { type: String },
-    img: { type: String },
-    imgTitle: { type: String },
-    trailer: { type: String },
-    video: { type: String },
-    year: { type: String },
-    limit: { type: String },
+    type: { type: String },
     genre: { type: String },
-    isSeries: { type: Boolean, default: false },
+    content: { type: Array },
   },
   {
     timestamps: true,
   }
 );
 
-module.export = mongoose.model("List", ListSchema);
+module.exports = mongoose.model("List", ListSchema);

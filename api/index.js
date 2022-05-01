@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const authRouter = require("./routes/auth");
 const userRouter = require("./routes/users");
+const movieRouter = require("./routes/movies");
 
 dotenv.config();
 
@@ -24,12 +25,13 @@ mongoose
   .catch((error) => console.log(error));
 
 app.get("/", (req, res) => {
-  res.send("backed connected");
+  res.send("backed server connected");
 });
 
 // use and call api route
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
+app.use("/api/movies", movieRouter);
 
 app.listen(port, () => {
   console.log("Backend server is running!");

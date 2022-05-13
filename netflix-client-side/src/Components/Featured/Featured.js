@@ -3,7 +3,7 @@ import "./Featured.scss";
 
 export default function Featured({ type }) {
   return (
-    <div className="featured">
+    <section className="featured">
       {type && (
         <div className="category">
           <span>{type === "movie" ? "Movies" : "Series"}</span>
@@ -48,6 +48,6 @@ export default function Featured({ type }) {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

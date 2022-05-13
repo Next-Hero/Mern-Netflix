@@ -41,6 +41,7 @@ export default function List() {
           <ListItem index={7} />
           <ListItem index={8} />
           <ListItem index={9} />
+          <ListItem index={10} />
         </div>
         <MdArrowForwardIos
           className="sliderArrow right"

@@ -3,7 +3,9 @@ import { useRef, useState } from "react";
 import ListItem from "./ListItem/ListItem";
 import "./List.scss";
 
-export default function List() {
+export default function List(props) {
+  const { title, content } = props.list;
+  // console.log(props.list);
   const [isMoved, setIsMoved] = useState(false);
   const [slideNumber, setSlideNumber] = useState(0);
 
@@ -23,7 +25,7 @@ export default function List() {
   };
   return (
     <section className="list">
-      <span className="listTitle">Continue to watch</span>
+      <span className="listTitle">{title}</span>
       <div className="wrapper">
         <MdArrowBackIos
           className="sliderArrow left"
@@ -31,17 +33,9 @@ export default function List() {
           style={{ display: !isMoved && "none" }}
         />
         <div className="container" ref={listRef}>
-          <ListItem index={0} />
-          <ListItem index={1} />
-          <ListItem index={2} />
-          <ListItem index={3} />
-          <ListItem index={4} />
-          <ListItem index={5} />
-          <ListItem index={6} />
-          <ListItem index={7} />
-          <ListItem index={8} />
-          <ListItem index={9} />
-          <ListItem index={10} />
+          {content.map((item, i) => (
+            <ListItem key={i} index={i} item={item} />
+          ))}
         </div>
         <MdArrowForwardIos
           className="sliderArrow right"

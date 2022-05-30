@@ -3,6 +3,7 @@ import Featured from "../../components/featured/Featured";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Widget from "../../components/widget/Widget";
+import NewUser from "../../components/newUser/NewUser";
 import Table from "../../components/table/Table";
 import "./home.scss";
 import { useEffect, useMemo, useState } from "react";
@@ -78,8 +79,11 @@ const Home = () => {
           />
         </div>
         <div className="listContainer">
-          <div className="listTitle">Latest Transactions</div>
-          <Table />
+          <NewUser />
+          <div className="transaction">
+            <div className="transactionTitle">Latest Transactions</div>
+            <Table />
+          </div>
         </div>
       </div>
     </section>

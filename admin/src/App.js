@@ -7,7 +7,7 @@ import Login from "./pages/login/Login";
 import New from "./pages/new/New";
 import Single from "./pages/single/Single";
 import "./style/dark.scss";
-import { DarkModeContext } from "./context/darkModeContext";
+import { DarkModeContext } from "./context/darkModeContext/darkModeContext";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);

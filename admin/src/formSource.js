@@ -47,7 +47,7 @@ export const productInputs = [
     id: 1,
     label: "Title",
     type: "text",
-    placeholder: "Apple Macbook Pro",
+    placeholder: "john Wick",
   },
   {
     id: 2,
@@ -57,20 +57,26 @@ export const productInputs = [
   },
   {
     id: 3,
-    label: "Category",
+    label: "Year",
     type: "text",
-    placeholder: "Computers",
+    placeholder: "Year",
   },
   {
     id: 4,
-    label: "Price",
+    label: "Genre",
     type: "text",
-    placeholder: "100",
+    placeholder: "Genre",
   },
   {
     id: 5,
-    label: "Stock",
+    label: "Duration",
     type: "text",
-    placeholder: "in stock",
+    placeholder: "Duration",
+  },
+  {
+    id: 6,
+    label: "Limit",
+    type: "text",
+    placeholder: "Limit",
   },
 ];

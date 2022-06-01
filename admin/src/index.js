@@ -6,15 +6,18 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { DarkModeContextProvider } from "./context/darkModeContext/darkModeContext";
 import { AuthContextProvider } from "./context/authContext/AuthContext";
+import { MovieContextProvider } from "./context/movieContext/MovieContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <DarkModeContextProvider>
       <AuthContextProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <MovieContextProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </MovieContextProvider>
       </AuthContextProvider>
     </DarkModeContextProvider>
   </React.StrictMode>
